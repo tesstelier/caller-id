@@ -58,8 +58,8 @@ describe('Get caller string', function() {
             foo();
         });
 
-        it('should be "eval:foo"', function() {
-            caller.should.equal('eval:foo');
+        it('should be "(eval)foo"', function() {
+            caller.should.equal('(eval)foo');
         });
     });
 
