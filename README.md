@@ -13,7 +13,7 @@ A utility for getting information on the caller of a function in node.js
 ### `getData`
 
 `getData()` can be used to get raw data about a function's caller
-
+```js
     var callerId = require('caller-id');
 
     // 1. Function calling another function
@@ -74,17 +74,17 @@ A utility for getting information on the caller of a function in node.js
     eval('(function evil() {' + '\\n' +
         'func();' + '\\n' +
         '})();');
-
+```
 ### `getString`
 
 `getString()` returns a brief string representing a function's caller
-
+```js
     var callerId = require('caller-id');
 
     function myFunction() {
         var callerString = callerId.getString();
     }
-
+```
 Using the same examples as above, `getString()` returns the following:
 
 1.  foo
@@ -94,13 +94,13 @@ Using the same examples as above, `getString()` returns the following:
 ### `getDetailedString`
 
 `getDetailedString()` returns a more detailed string representing a function's caller
-
+```js
     var callerId = require('caller-id');
 
     function myFunction() {
         var detailedCallerString = callerId.getDetailedString();
     }
-
+```
 Using the same examples as above, `getDetailedString()` returns the following:
 
 1.  foo at /path/of/this/file.js:5
